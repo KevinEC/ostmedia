@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './variables.scss';
 import styles from './Card.module.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 class Card extends Component {
   render() {
 

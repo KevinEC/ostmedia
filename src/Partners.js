@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-
 import { HashLink as AnchorLink } from "react-router-hash-link";
-
 import styles from './Partners.module.scss';
 import splash from './Splash.module.scss';
-
 import Nav from './Nav';
-import Footer from './Footer';
 import PartnersCard from './PartnersCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

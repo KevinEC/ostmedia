@@ -14,7 +14,7 @@ class Annonsera extends Component {
 				</div>
 					<div className={styles.headerText}>
 						<h1 className={styles.headerText}>Vi skapar dina möjligheter</h1>
-						<h4 className={styles.headerText}>Vår försäljningsavdelning är en unik sammansatt grupp av reklamkunniga medierådgivare, 
+						<h4>Vår försäljningsavdelning är en unik sammansatt grupp av reklamkunniga medierådgivare, 
 							kreatörer & analytiker som tillsammans ger dina affärer en god skjuts framåt inom allt från 
 							digital och traditionell annonsering i  nyhetsmedier, till sociala medier, Google Ads och Native.
 							Kontakta oss på <a className={styles.mailLink} href="mailto:foretagsannons@ostmedia.se">foretagsannons@ostmedia.se</a> så hjälper vi dig direkt!

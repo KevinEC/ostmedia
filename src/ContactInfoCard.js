@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './variables.scss';
 import styles from './ContactInfoCard.module.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 class ContactInfoCard extends Component {
 
   constructor(props) {
@@ -35,7 +33,7 @@ class ContactInfoCard extends Component {
       let mail = "";
       let webb = "";
 
-      if (this.props.fullName == data.acf.parent_contactcard.post_title) {
+      if (this.props.fullName === data.acf.parent_contactcard.post_title) {
         
         if(data.acf.phone) {
           

@@ -6,8 +6,6 @@ import splash from './Splash.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Nav from './Nav';
-import Card from './Card';
-import Footer from './Footer';
 import PartnersCard from './PartnersCard';
 
 class Prenumerera extends Component {
@@ -32,11 +30,7 @@ class Prenumerera extends Component {
       })
   }
   render(){
-    const url = this.props.match.url;
-
     const partners = this.state.partners.map((nyhetsmedia, i) => {
-      //remove spaces and replace with -. Also covert to lowercase
-      const link = url + "/" + nyhetsmedia.acf.name.toLowerCase().replace(/\s/g, "-");
       return <PartnersCard title={nyhetsmedia.acf.name} link={nyhetsmedia.acf.subscription} icon={nyhetsmedia.acf.logo.url} order={nyhetsmedia.acf.order} />
     });
 

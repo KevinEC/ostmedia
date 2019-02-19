@@ -18,10 +18,6 @@ $padding-y: 40px;
 	z-index: 20;
 }
 
-menu{
-	z-index: -21;
-}
-
 @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
     // IE9+ CSS
     .nav { 
@@ -45,30 +41,9 @@ menu{
 
 	transition: all ease-in 0.1s;
 }
-menu{
-	margin-right: auto;
-	height: 60px;
-	width: 100px;
-	display: block;
-	transition: all ease-in 0.1s;
-}
 
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
- 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
 
 .logo:hover{
-
 	width: 103px;
 
 }
@@ -79,7 +54,7 @@ menu{
 	$padding-t: 20px;
 
 	.nav{
-		width: calc(100% - 2*#{$padding-x});
+		width: 100%;
 		padding: $padding-y $padding-x;
 	}
 	.logo{

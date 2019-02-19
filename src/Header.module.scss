@@ -76,13 +76,11 @@ video{
 }
 
 .headerText {
-
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
 	width: 670px;
-
 	animation: flipIt 2.5s cubic-bezier(.29,.82,.17,1.02) 0s 1;
 
 	color: $white;

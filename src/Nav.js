@@ -61,26 +61,25 @@ class Nav extends Component {
 				  position: 'relative',
 				  width: '36px',
 				  height: '30px',
-
-				  marginLeft: '85%'
+				  marginTop: "-45px"
 				},
 				bmBurgerBars: {
 				  background: 'white'
 				},
 				bmCrossButton: {
-				  height: '24px',
-				  width: '24px'
+				  height: '36px',
+				  width: '36px',
+				  marginTop: "-30%",
 				},
 				bmCross: {
 				  background: '#bdc3c7'
 				},
 				bmMenu: {
-				  background: '#373a47',
+				  background: 'rgb(0, 82, 140)',
 				  padding: '2.5em 1.5em 0',
 				  fontSize: '1.15em',
 				  height: '100vh',
-				  position: 'relative',
-				  zIndex: '50'
+				  marginTop: "-34%"
 				},
 				bmMorphShape: {
 				  fill: '#373a47'
@@ -93,16 +92,13 @@ class Nav extends Component {
 				  background: 'rgba(0, 0, 0, 0.3)'
 				}
 			  }
-			const partnerLogo = {
-				display: 'block'
-			}
 
 			return (
 				<div id="top" style={this.state.style} >
 				
 					<nav className={styles.nav} >
 					<Link to="/" className={styles.logo}></Link>
-						 <Menu right styles={ menu }  >
+						 <Menu right styles={ menu } noOverlay >
 							<NavItem title="Annonsera" link="/annonsera"/>
 							<NavItem title="Journalistik" link="/journalistik" />
 							<NavItem title="Karriär" link="/karriar"/>

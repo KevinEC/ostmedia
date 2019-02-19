@@ -72,7 +72,7 @@ class Partner extends Component {
       //remove spaces and replace with -. Also covert to lowercase
       // + EDIT: Added second replace to fix error when having a / in the slug.
       const dataTitle = card.acf.parent_nyhetsmedie.post_title.toLowerCase().replace(/\s/g, "-").replace(/\/.*/g,'');
-      if (dataTitle == this.state.slug){
+      if (dataTitle === this.state.slug){
         return <ContactInfoCard
                   key={card.id}
                   name={card.acf.title}

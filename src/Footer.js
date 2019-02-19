@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Footer.module.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 class Footer extends Component {
   render() {
     return (
