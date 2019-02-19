@@ -129,7 +129,7 @@ class Nav extends Component {
 								<NavItem title="Karriär" link="/karriar"/>
 								<NavItem title="Kontakt" link="/nyhetsmedier" />
 								<NavItem title="Materialinlämning" link="/Inlamning" />
-								<NavItem title="Prenumerera" link="/prenumererar"/>
+								<NavItem title="Prenumerera" link="/prenumerera"/>
 							</nav>
 						</div>
 					);
