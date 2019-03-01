@@ -57,6 +57,8 @@ class ContactInfoCard extends Component {
                   </ul>
                 </div>
       }
+      else
+        return null;
     });
 
 

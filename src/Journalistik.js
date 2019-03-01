@@ -23,7 +23,7 @@ class Journalistik extends Component {
             <div className={splash.splash} >
               <max>
                 <h1 className={splash.title}>
-                  Så jobbar vi med nyheter
+                  Såhär arbetar vi med dina nyheter
                 </h1>
               </max>
             </div>

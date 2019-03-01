@@ -121,6 +121,7 @@ hr {
 	margin-right: $title-line-margin;
 	background-color: $primary;
 }
+
 .scroll{
 	z-index: 20;
 	margin-left: calc(50% - 39.375px);
@@ -143,7 +144,7 @@ hr {
 .scroll_journalistik{
 	z-index: 20;
 	margin-left: calc(50% - 39.375px);
-	margin-top: 5%;
+	margin-top: 7.5%;
 	width: 35px;
 	height: 60px;
 	transition: all ease-out 0.1s;
@@ -192,6 +193,18 @@ hr {
 	text-decoration: none;
 }
 
+.footerText{
+	font-weight: 300;
+	color: $grey;
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	word-spacing: 2px;
+	font-size: 22px;
+	font-family: "Open Sans";
+	text-decoration: none;
+}
+
 .descriptionText a[href*="mailto"]:hover{
 	color: lighten($primary, 10%);
 }
@@ -228,9 +241,10 @@ hr {
 	flex: 1 1 170px;
 	align-items: space-between;
 	padding: $card-container-padding 0px;
-
+	padding-bottom: 20px;
 	margin-left: -$card-margin;
 	margin-top: -$card-margin; 
+
 }
 
 .articleContainer{
@@ -344,6 +358,16 @@ hr {
 	background-color: white;
 }
 
+@media (max-width: (50 + $lg)){
+	.descriptionText_prenumerera, .descriptionText, .descriptionText a{
+		font-size: 18px;
+		margin-bottom: 0.5%;
+	}
+	.scroll_journalistik{
+		margin-top: 13.3%;
+	}
+	
+}
 	
 @media (max-width: (50 + $md2)) {
 
@@ -361,18 +385,27 @@ hr {
 		line-height: normal;
 		width: 100%;
 	}
-
+	.footerText{
+		font-size: 16px;
+	}
 	.cardContainer{
 		justify-content: space-around;
 	}
+	.articleSubTitle::before{
+		content: '';
+		display: inline-block;
+		width: $title-line-width;
+		height: 36px;
+		margin-right: $title-line-margin;
+		margin-top: 18.5px;
+		margin-bottom: auto;
+		background-color: $primary;
+	}
+
 
 }
 
 @media (max-width: (50 + $md1)) {
-
-	.title{
-		margin-left: 15px;
-	}
 
 	.description > max{
 		justify-content: center;
@@ -389,6 +422,19 @@ hr {
 		margin-top: 0;
 	}
 
+	.articleSubTitle::before{
+		content: '';
+		display: inline-block;
+		width: $title-line-width;
+		height: 36px;
+		margin-right: 5px;
+		margin-left: $title-line-margin - 5px;
+		margin-top: 18.5px;
+		margin-bottom: auto;
+		background-color: $primary;
+	}
+	
+
 }
 
 @media (max-width: (50 + $sm)) {
@@ -404,7 +450,8 @@ hr {
 		background-color: $primary;
 		padding: 20px 0;
 	}
-	 .splash::before, .small .splash::before{
+
+	.splash::before, .small .splash::before{
 		height: $tiny-splash-height !important;
 	}
 	 .splash::after, .small .splash::after{

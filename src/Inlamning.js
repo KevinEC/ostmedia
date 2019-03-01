@@ -15,6 +15,22 @@ import utomhusIcon from './assets/icons/Utomhus.PNG';
 
 class Inlamning extends Component {
 
+  // Digital
+  digitalLinks = [];
+  digitalLinkTitles = [];
+
+  // Print
+  printLinks = [];
+  printLinkTitles = [];
+
+  // Webb 
+  webLinks = [];
+  webLinkTitles = [];
+
+  // Outside
+  outsideLinks = [];
+  outsideLinkTitles = [];
+
   constructor(props) {
     super(props);
 
@@ -38,9 +54,73 @@ class Inlamning extends Component {
 
   }
 
+  // Translating field names to the ones shown on the web.
+  translateFieldNames(list) {
+    let listToReturn = [];
+    list.forEach(element => {
+      switch(element) {
+        case "material_info":
+          listToReturn.push("Materialinformation");
+          break;
+        case "link_submission":
+          listToReturn.push("Lämna in material");
+          break;
+        case "submission_guide":
+          listToReturn.push("Guide till inlämning");
+          break;
+        case "module_map":
+          listToReturn.push("Modulkarta");
+          break;
+        default:
+          break;
+      }
+    })
+    return listToReturn;
+  }
 
-  render() {
 
+  render() {  
+
+    // Fetching latest link data from backend, this aint pretty
+    this.state.cardData.forEach( data => {
+      switch(data.title.rendered){
+        case "Digital":
+            this.digitalLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
+              return data.acf[element] !== "";
+            }));
+            this.digitalLinks = Object.values(data.acf).filter(element => {
+              return element !== "";
+            });
+          break;
+        case "Print" : 
+          this.printLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
+            return data.acf[element] !== "";
+          }));
+          this.printLinks = Object.values(data.acf).filter(element => {
+            return element !== "";
+          });
+          break;
+        case "WebbTV" : 
+          this.webLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
+            return data.acf[element] !== "";
+          }));
+          this.webLinks = Object.values(data.acf).filter(element => {
+            return element !== "";
+          });
+          break;
+        case "Utomhus" : 
+          this.outsideLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
+            return data.acf[element] !== "";
+          }));
+          this.outsideLinks = Object.values(data.acf).filter(element => {
+            return element !== "";
+          });
+          break;
+        default:
+          break;
+      }
+
+    })
 
     return (
     	[
@@ -66,39 +146,25 @@ class Inlamning extends Component {
         <max>
           <div className={splash.cardContainer}>
             
-            <Card title="Digital" 
+            <Card key={"digital"} title="Digital" 
                   icon={digitalIcon} 
-                  links={[
-                        "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs",
-                        "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs"
-                        ]} 
-                  linkTitles={["Materialinformation", "Lämna in material"]}
+                  links={Object.values(this.digitalLinks)}
+                  linkTitles={Object.values(this.digitalLinkTitles)}
             />
-            <Card title="Print" 
+            <Card key={"print"} title="Print" 
                   icon={printIcon} 
-                  links={[
-                          "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs/print-3056",
-                          "http://193.234.168.39/cargo/CargoForms_3.0.html;jsessionid=82F11E690DED3E626DE9E6D9AB298545?t=1542014462096&uuid=9fff4e99-a756-4657-b44a-9d32991ef662&sid=9da1ba94-71f&cargoRequest=openProfile&PUID=fc45b984-8ac1-46bd-a066-16aa909dc619",
-                          "http://www.ostgotamedia.eu/material-inlamning/",
-                          "http://media.ostgotamedia.eu/Modulkarta.pdf"
-                        ]}
-                  linkTitles={["Materialinformation", "Lämna in material", "Guide till inlämning", "Modulkarta"]}
+                  links={Object.values(this.printLinks)}
+                  linkTitles={Object.values(this.printLinkTitles)}
                   />
-            <Card title="WebbTV"
+            <Card key={"webbTv"} title="WebbTV"
                   icon={webbTvIcon} 
-                  links={[
-                          "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs/webb-tv-2988",
-                          "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs/webb-tv-2988"
-                        ]}
-                  linkTitles={["Materialinformation", "Lämna in material"]}
+                  links={Object.values(this.webLinks)}
+                  linkTitles={Object.values(this.webLinkTitles)}
                          />
-            <Card title="Utomhus" 
+            <Card key={"outside"} title="Utomhus" 
                   icon={utomhusIcon} 
-                  links={[
-                          "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs/ooh-2968",
-                          "https://ocast.com/sv-se/groups/ostgota-media-3261/adspecs/utomhus-ooh-2968"
-                        ]} 
-                  linkTitles={["Materialinformation", "Lämna in material"]}
+                  links={Object.values(this.outsideLinks)}
+                  linkTitles={Object.values(this.outsideLinkTitles)}
                   />
             
           </div>

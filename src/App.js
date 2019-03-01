@@ -34,9 +34,9 @@ class App extends Component {
     return (
     	
     	<Router>
-			<div>
+			<div key={"mainNav"}>
 		      	<Route exact={true} path="/" component={Home} />
-		        <Route path="/inlamning" component={Inlamning} />
+		        <Route key={"Inlamning"} path="/inlamning" component={Inlamning} />
 				<Route path="/journalistik" component={Journalistik} />
 				<Route path="/prenumerera" component={Prenumerera} />
 				<Route path="/karriar" component={Karriar} />

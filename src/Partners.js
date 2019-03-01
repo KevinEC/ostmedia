@@ -37,7 +37,7 @@ class Partners extends Component {
     const partners = this.state.partners.map((nyhetsmedia, i) => {
       //remove spaces and replace with -. Also covert to lowercase
       const link = url + "/" + nyhetsmedia.acf.name.toLowerCase().replace(/\s/g, "-");
-      return <PartnersCard title={nyhetsmedia.acf.name} link={link} icon={nyhetsmedia.acf.logo.url} order={nyhetsmedia.acf.order} />
+      return <PartnersCard key={nyhetsmedia.acf.name} title={nyhetsmedia.acf.name} link={link} icon={nyhetsmedia.acf.logo.url} order={nyhetsmedia.acf.order} />
     });
 
 

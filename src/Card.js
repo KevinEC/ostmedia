@@ -7,7 +7,7 @@ class Card extends Component {
 
     const linkTitles = this.props.linkTitles;
     const links = this.props.links.map( (link, i) =>
-      <li><a href={link}>{linkTitles[i]}</a></li>
+      <li key={link + i}><a  href={link}>{linkTitles[i]}</a></li>
     );
 
     return (

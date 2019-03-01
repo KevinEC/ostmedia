@@ -80,6 +80,8 @@ class Partner extends Component {
                   description={card.acf.description}
                 />
       }
+      else
+        return null;
     })
 
     return (
@@ -94,7 +96,7 @@ class Partner extends Component {
               {title}
               {headerCard}
               <AnchorLink to="#cards"> 
-                <FontAwesomeIcon icon={["fas", "angle-down"]} size="medium" color="white" className={splash.scroll} />
+                <FontAwesomeIcon icon={["fas", "angle-down"]} size="sm" color="white" className={splash.scroll} />
               </AnchorLink>
             </div>
             <AnchorLink to="#cards"> 

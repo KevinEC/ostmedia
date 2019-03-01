@@ -6,9 +6,6 @@ import styles from './NavItem.module.scss';
 
 class NavItem extends Component {
 	render() {
-
-		
-
 		if(this.props.anchor === true)
 		{
 			return(

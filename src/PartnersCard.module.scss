@@ -57,7 +57,7 @@ $card-width-reduction: 20px; //used for responsiveness flexibility
 .cardIconInactive{
 	max-width: calc(#{$card-height} - #{$card-width-reduction} - #{$icon-padding});
 	padding: $icon-padding;
-	filter: grayscale(100%) brightness(300%);
+	filter: grayscale(200%) brightness(200%);
 	object-fit: contain;
 }
 
@@ -93,11 +93,27 @@ $card-width-reduction: 20px; //used for responsiveness flexibility
 		text-decoration: none;
 	}
 
+	.cardInactive{
+
+		padding: 10px;
+		padding-top: 20px;
+		min-width: $partner-card-width;
+		max-width: $partner-card-width;
+		height: $card-height;
+	
+		margin: 10px;
+	
+		border: 1px solid #eaeaea;
+	
+		text-decoration: none;
+		color: rgb(170,170,170);
+	}
+
 	.title h3{
 		font-size: 20px;
 		text-decoration: none;
 	}
-	.cardIcon{
+	.cardIcon, .cardIconInactive{
 		width: calc(#{$card-height} - #{$card-width-reduction} - #{$icon-padding});
 		padding: $icon-padding;
 	}
@@ -113,11 +129,11 @@ $card-width-reduction: 20px; //used for responsiveness flexibility
 
 	$card-width-reduction: 0px;
 
-	.card{
+	.card, .cardInactive{
 		min-width: $partner-card-width;
 		max-width: $partner-card-width;
 	}
-	.cardIcon{
+	.cardIcon, .cardIconInactive{
 		width: calc(#{$card-height} - #{$card-width-reduction} - #{$icon-padding});
 		padding: $icon-padding;
 	}

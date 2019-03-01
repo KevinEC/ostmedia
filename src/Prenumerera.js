@@ -60,8 +60,11 @@ class Prenumerera extends Component {
               {partners}
               
             </div>
+            
           </max>
+          <h5 className={splash.footerText}>* Gråmarkerade tidningar är gratistidningar, prenumeration ej möjlig</h5>
         </div>
+        
         ]
     );
   }
