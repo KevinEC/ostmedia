@@ -78,7 +78,7 @@ $info-padding: 140px;
 	z-index: 3;
 }*/
 .header max{
-	z-index: 20;
+	z-index: 19;
 }
 .headerContent{
 	height: $header-height;
@@ -87,9 +87,6 @@ $info-padding: 140px;
 
 	display: flex;
 	align-items: center;
-
-
-	z-index: 5;
 }
 .logo{
 	max-width: 500px;
@@ -193,10 +190,10 @@ $info-padding: 140px;
 	.header > max{
 		display: flex;
 		justify-content: center;
+		flex-direction: column;
 	}
 
 	.headerTitle h1{
-		max-width: 350px;
 		font-size: 40px;
 	}
 
@@ -204,14 +201,20 @@ $info-padding: 140px;
 
 @media (max-width: (50 + $md2)) {
 
+	.tinyLink{
+		padding: 0 !important;
+		width: 0 !important;
+	}
+
 	.headerTitle{
-		width: 100%;
+		width: 100% !important;
 	}
 	.headerTitle h1{
-		max-width: fit-content;
+		width: 100% !important;
 	}
 	.headerTitleContact{
-		max-width: fit-content;
+		width: 100% !important;
+		max-width: 450px !important;
 	}
 	.headerTitleContact li{
 		display: flex;
@@ -298,7 +301,6 @@ $info-padding: 140px;
 	}
 	.headerTitle h1{
 		width: calc(#{$title-h1-width} - 2*#{$title-padding-x} - #{$button-width} );
-		max-width: none;
 	}
 	.headerTitleContact{
 		width: calc(#{$title-h1-width} - 2*#{$title-padding-x});	
@@ -312,11 +314,6 @@ $info-padding: 140px;
 	$button-width: 50px;
 	$title-padding-x: 20px;
 	$title-padding-y: 30px;
-
-	.tinyLink{
-		padding: 0 !important;
-		width: 0 !important;
-	}
 
 	.headerTitle{
 		justify-content: center;
