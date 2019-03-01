@@ -95,11 +95,10 @@ class Partner extends Component {
             <div className={styles.headerTitle} >
               {title}
               {headerCard}
-              <AnchorLink to="#cards"> 
-                <FontAwesomeIcon icon={["fas", "angle-down"]} size="sm" color="white" className={splash.scroll} />
+              <AnchorLink to="#cards" className={styles.tinyLink}> 
               </AnchorLink>
             </div>
-            <AnchorLink to="#cards"> 
+            <AnchorLink to="#cards" className={styles.arrowDown}> 
                 <FontAwesomeIcon icon={["fas", "angle-down"]} size="9x" color="white" className={splash.scroll} />
               </AnchorLink>
           </max>

@@ -137,6 +137,13 @@ button{
 		margin-bottom: 5px;
 	}
 
+	.mailLink{
+		text-decoration: none;
+		color: $white;
+		font-family: "Open Sans";
+		font-size: 3.5vw;
+	}
+
 }
 
 @media (max-width: (50 + $sm)) {
@@ -161,14 +168,26 @@ button{
 		line-height: normal;
 		text-align: left;
 	}
+
+	.mailLink{
+		font-size: 3.5vw;
+	}
 }
 
 @media (max-width: (50 + $sm)) {
 
-
+	.headerText{
+		margin-left: 0;
+	}
 	.headerText h4{
 		font-size: 4vw;
 	}
 
+	.mailLink{
+		font-size: 4vw;
+	}
+	.leftBtn{
+		font-size: 4vw;
+	}
 
 }

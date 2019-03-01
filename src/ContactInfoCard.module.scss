@@ -193,7 +193,7 @@ $title-line-width: 3.5px;
 		padding: $card-outer-padding-y $card-outer-padding-x;
 		padding-left: ($card-outer-padding-x);
 
-		width: calc(100% - 2*#{$card-outer-padding-x});
+		width: 100%;
 		max-width: none;
 	}
 
@@ -205,11 +205,12 @@ $title-line-width: 3.5px;
 		padding: $card-outer-padding-y $card-outer-padding-x;
 		padding-left: ($card-outer-padding-x);
 
-		width: calc(100% - 2*#{$card-outer-padding-x});
+		width: 100%;
 		max-width: none;
 	}
 	.card:nth-child(even) max{
 		justify-content: center;
+		
 	}
 
 	// Typography
@@ -270,13 +271,13 @@ $title-line-width: 3.5px;
 		padding: $card-outer-padding-y $card-outer-padding-x;
 		padding-left: ($card-outer-padding-x);
 
-		width: calc(100% - 2*#{$card-outer-padding-x});
+		width: 100%;
 	}
 	.card:nth-child(even) .cardContent{
 		padding: $card-outer-padding-y $card-outer-padding-x;
 		padding-left: ($card-outer-padding-x);
 
-		width: calc(100% - 2*#{$card-outer-padding-x});
+		width: 100%;
 	}
 
 	// Typography

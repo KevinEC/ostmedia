@@ -150,7 +150,7 @@ $info-padding: 140px;
 	word-break: break-word !important;
 	font-size: 14px !important;
 	font-weight: 600 !important;
-	padding: 5px 0 !important;
+	//padding: 5px 0 !important;
 
 	display: flex !important;
 	align-items: center !important;
@@ -313,25 +313,65 @@ $info-padding: 140px;
 	$title-padding-x: 20px;
 	$title-padding-y: 30px;
 
+	.tinyLink{
+		padding: 0 !important;
+		width: 0 !important;
+	}
+
 	.headerTitle{
 		justify-content: center;
 	}
 	.headerTitle h1{
 		padding: $title-padding-y $title-padding-x;
-		width: calc(#{$title-h1-width} - 2*#{$title-padding-x} - #{$button-width} );
+		width: 100%;
 		font-size: 30px;
 	}
 	.headerTitleContact{
 		padding: $title-padding-y $title-padding-x;
-		width: calc(#{$title-h1-width} - 2*#{$title-padding-x});	
+		width: 100%;	
 	}
-
+	max{
+		display: flex;
+		flex-direction: column;
+	}
+	.arrowDown{
+		margin-bottom: 50px;
+	}
+	.mailLink{
+		padding-top: none !important;
+	}
 }
 
 @media (max-width: (50 + $xs)) {
 
+	.headerTitleContact{
+		width: 100%;
+	}
+
+	.headerTitle{
+		width: 100%;
+	}
+
+	.arrowDown{
+		margin-bottom: 50px;
+	}
+	.tinyLink{
+		padding: 0 !important;
+		width: 0 !important;
+	}
+
+	max{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.mailLink{
+		padding-top: none;
+	}
+
 	.headerTitle h1{
 		font-size: 25px;
+		width: 100%;
 	}
 	.headerTitleContact li{
 		font-size: 14px;

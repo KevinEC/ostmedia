@@ -78,7 +78,7 @@ class Nav extends Component {
 				  background: 'rgb(0, 82, 140)',
 				  padding: '2.5em 1.5em 0',
 				  fontSize: '1.15em',
-				  height: '100vh',
+				  height: '110vh',
 				  marginTop: "-34%"
 				},
 				bmMorphShape: {

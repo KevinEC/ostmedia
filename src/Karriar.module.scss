@@ -194,6 +194,7 @@ button{
 		width: 95vw;
 		font-size: 18px;
 		line-height: 28px;
+		word-break: break-word;
 	}
 
 }
@@ -224,15 +225,25 @@ button{
 		width: 95vw;
 		font-size: 14px;
 		line-height: 20px;
+		word-break: break-word;
 	}
 }
 
 @media (max-width: (50 + $sm)) {
 
 
-	.headerText h4{
-		font-size: 4vw;
+
+	.columnText{
+		width: 100vw;
+		font-size: 12px;
+		line-height: 15px;
+		word-break: break-word;
 	}
+
+	.btns a{
+		font-size: 3vw;
+	}
+
 
 
 }
