@@ -120,9 +120,16 @@ $card-padding-y: 40px;
 		min-width: $min-width;
 		max-width: $max-width;
 		margin: 4px 2px;
+		padding: 15px;
+	}
+	.cardIcon{
+		height: 160px;
 	}
 	.cardIcon img{
 		width: 85%;
+	}
+	.cardText {
+		word-break: break-word;
 	}
 
 }
@@ -139,7 +146,9 @@ $card-padding-y: 40px;
 		min-width: $min-width;
 		max-width: $max-width;
 	}
-
+	.cardText {
+		word-break: break-word;
+	}
 
 }
 
@@ -155,6 +164,9 @@ $card-padding-y: 40px;
 	.cardIcon img{
 		width: 65%;
 	}
+	.cardText {
+		word-break: break-word;
+	}
 
 }
 
@@ -167,13 +179,16 @@ $card-padding-y: 40px;
 	.card{
 		margin: $card-margin 0;
 		max-width: 10px;
-		padding: $card-padding-y $card-padding-x;
 	}
 	.cardIcon{
 		padding-bottom: 20px;
 	}
 	.cardIcon img{
 		width: 55%;
+	}
+
+	.cardText {
+		word-break: break-word;
 	}
 
 }
