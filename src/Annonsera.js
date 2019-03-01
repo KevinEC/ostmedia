@@ -21,7 +21,7 @@ class Annonsera extends Component {
 
 						</h4>
 						<ButtonToolbar className={styles.btns}>
-							<Button size="lg" className={styles.leftBtn}>
+							<Button size="lg" className={styles.leftBtn} href={'https://ocast.com/sv-se/groups/ostgota-media-3261'}>
 							Läs mer om våra produkter och medieslag här
 							</Button>
 						</ButtonToolbar>

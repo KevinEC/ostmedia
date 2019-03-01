@@ -105,11 +105,12 @@ $info-padding: 140px;
 .headerTitle h1{
 	margin: 0;
 	max-width: 450px;
+	min-width: 350px;
 	font-weight: 100;
 	font-size: 50px;
 	padding: $title-padding-y;
-	padding-left: $title-padding-x;
-
+	padding-left: calc($title-padding-x + 10px);
+	text-align: left;
 	border-radius: $border-radius 0 0px $border-radius; // bottom and top left
 	
 	background-color: rgba($dark-blue, 0.9);

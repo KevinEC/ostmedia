@@ -14,26 +14,16 @@ class Journalistik extends Component {
 
     this.state = {
     };
-  }
-  componentDidMount() {
-    let dataURL = "http://api.ostmedia.se/wp-json/wp/v2/pages";
-    
-    fetch(dataURL)
-      .then(res => res.json())
-      .then(res => {
-          
-      })
-  }
+    }
 
     render(){
         return (
-            [<Nav absolute={true} />,
-            <div className={[splash.container].join(' ')} id={splash.bg_journalistik}>
+            [<Nav absolute={true} key={'nav-bar'} />,
+            <div key={'news-body'} className={[splash.container].join(' ')} id={splash.bg_journalistik}>
             <div className={splash.splash} >
               <max>
                 <h1 className={splash.title}>
-                Så jobbar vi med nyheter
-
+                  Så jobbar vi med nyheter
                 </h1>
               </max>
             </div>
@@ -59,7 +49,7 @@ class Journalistik extends Component {
                   </a>
                   <p className={splash.articleParagraph}>
                     Allmänhetens Pressombudsman, PO, prövar klagomål från enskilda som känner sig orättvist behandlade av pressen. 
-                    Både privatpersoner och företag och organisationer kan anmäla en publicering till PO och få den prövad.
+                    Både privatpersoner, företag och organisationer kan anmäla en publicering till PO och få den prövad.
                   </p>
                   <a className={splash.articleLink} href="https://po.se/vill-du-anmala/">
                     Klicka här för att läsa mer om hur du gör en PO-anmälan.

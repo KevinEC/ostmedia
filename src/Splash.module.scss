@@ -24,6 +24,16 @@ hr {
 	margin-bottom:100px;
 }
 
+.infoCardLine{
+	width: 100%;
+	height: 2px;
+	margin-left: 0 ;
+	margin-right: auto;
+	background-color:$primary;
+	border: 0 none;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
 
 #bg_interview .splash:after{
 	background-image: url(./assets/interview.jpg);
@@ -90,7 +100,6 @@ hr {
 .title{
 	margin: 0;
 	color: $white;
-	margin-bottom: 40px;
 	padding: $title-padding;
 	margin-left: -($title-line-margin + $title-padding + $title-line-width + 1);
 	border-radius: 1px;
@@ -140,7 +149,7 @@ hr {
 	transition: all ease-out 0.1s;
 	vertical-align: bottom;
 }
-.scroll:hover{
+.scroll:hover, .scroll_journalistik:hover, .scroll_partners:hover{
 	padding-top:10px;
 }
 .description{

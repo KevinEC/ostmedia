@@ -25,6 +25,25 @@ $card-width-reduction: 20px; //used for responsiveness flexibility
 	color: $grey;
 }
 
+.cardInactive{
+	background-color: $white;
+	display: flex;
+	align-items: center;
+
+	padding: 10px;
+	padding-top: 20px;
+	min-width: ($partner-card-width + 20);
+	max-width: ($partner-card-width + 20);
+	height: $card-height;
+
+	margin: 15px;
+
+	border: 1px solid #eaeaea;
+
+	text-decoration: none;
+	color: rgb(170,170,170);
+}
+
 .card:hover{
 	text-decoration: none;
 	size:150%;
@@ -34,6 +53,14 @@ $card-width-reduction: 20px; //used for responsiveness flexibility
 	padding: $icon-padding;
 	object-fit: contain;
 }
+
+.cardIconInactive{
+	max-width: calc(#{$card-height} - #{$card-width-reduction} - #{$icon-padding});
+	padding: $icon-padding;
+	filter: grayscale(100%) brightness(300%);
+	object-fit: contain;
+}
+
 .title{
 	display: flex-end;
 	flex-flow: column;

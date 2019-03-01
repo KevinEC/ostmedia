@@ -52,7 +52,7 @@ class Partner extends Component {
 
     const headerCard = this.state.partnerData.map((data,i) => {
       let mailto = "mailto:" + data.acf.mail;
-      return <div className={styles.headerTitleContact}>
+      return <div key={i} className={styles.headerTitleContact}>
               <ul>
                 <li><b>Telefon:</b> {data.acf.phone}</li>
                 <li><b>Öppettider:</b> {data.acf.openhours}</li>
@@ -64,7 +64,7 @@ class Partner extends Component {
 
     const title = this.state.partnerData.map((data,i) => {
       this.setBg(data.acf.bg);
-      return <h1>{data.acf.name}</h1>
+      return <h1 key={i}>{data.acf.name}</h1>
     });
 
     const contactCards = this.state.cardData.map((card,i) => {
@@ -94,9 +94,12 @@ class Partner extends Component {
               {title}
               {headerCard}
               <AnchorLink to="#cards"> 
-                <FontAwesomeIcon icon={["fas", "angle-down"]} size="lg" color="white" className={splash.scroll} />
+                <FontAwesomeIcon icon={["fas", "angle-down"]} size="medium" color="white" className={splash.scroll} />
               </AnchorLink>
             </div>
+            <AnchorLink to="#cards"> 
+                <FontAwesomeIcon icon={["fas", "angle-down"]} size="9x" color="white" className={splash.scroll} />
+              </AnchorLink>
           </max>
         </div>
         <div className={styles.cardsContainer} id="cards" >

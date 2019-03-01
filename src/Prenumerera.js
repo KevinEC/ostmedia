@@ -31,12 +31,12 @@ class Prenumerera extends Component {
   }
   render(){
     const partners = this.state.partners.map((nyhetsmedia, i) => {
-      return <PartnersCard title={nyhetsmedia.acf.name} link={nyhetsmedia.acf.subscription} icon={nyhetsmedia.acf.logo.url} order={nyhetsmedia.acf.order} />
+      return <PartnersCard key={i} title={nyhetsmedia.acf.name} link={nyhetsmedia.acf.subscription} icon={nyhetsmedia.acf.logo.url} order={nyhetsmedia.acf.order} />
     });
 
     return (
       [
-        <Nav absolute={true} />,
+        <Nav absolute={true}/>,
         <div className={[splash.container].join(' ')} id={splash.bg_fire}>
           <div className={splash.splash}>
             <max>

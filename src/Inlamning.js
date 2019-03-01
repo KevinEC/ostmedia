@@ -19,12 +19,27 @@ class Inlamning extends Component {
     super(props);
 
     this.state = {
+      cardData: [],
+      wpRestUrl: "http://api.ostmedia.se/wp-json/wp/v2/"
     };
+  }
+
+  componentDidMount(){
+
+    let cardDataUrl = this.state.wpRestUrl + "inlamning?per_page=100";
+    fetch(cardDataUrl)
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+            cardData: res
+        })
+    })
+
+
   }
 
 
   render() {
-
 
 
     return (
@@ -34,8 +49,7 @@ class Inlamning extends Component {
         <div className={splash.splash}>
           <max>
             <h1 className={splash.title}>
-            Materialinlämning
-
+              Materialinlämning
             </h1>
           </max>
         </div>
@@ -51,7 +65,7 @@ class Inlamning extends Component {
         </div>
         <max>
           <div className={splash.cardContainer}>
-          
+            
             <Card title="Digital" 
                   icon={digitalIcon} 
                   links={[

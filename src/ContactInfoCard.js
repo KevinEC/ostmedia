@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './variables.scss';
 import styles from './ContactInfoCard.module.scss';
+import splash from './Splash.module.scss'
 
 class ContactInfoCard extends Component {
 
@@ -47,7 +48,7 @@ class ContactInfoCard extends Component {
           let webAdress = data.acf.webb;
           webb =  <li>Webb:<b><a href={webAdress}> {data.acf.webb}</a></b></li>;
         }
-        return <div className={styles.section} >
+        return <div key={i} className={styles.section} >
                   <h4>{data.acf.title}</h4>
                   <ul>
                     {mail}
@@ -67,6 +68,7 @@ class ContactInfoCard extends Component {
             <div className={styles.text} >
               {sections}
             </div>
+            <hr className={splash.infoCardLine}></hr>
             <p className={styles.description}>{this.props.description}</p>
           </div>
         </max>

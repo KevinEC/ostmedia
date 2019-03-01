@@ -20,7 +20,7 @@ class Karriar extends Component {
 
 						Vill du vara med och utveckla och driva försäljningen på en av regionens mest dynamiska och spännande arbetsplatser? Eller gillar du hög nyhetspuls, hög kvalitet och ständigt ökande läsning? Då kanske du är en framtida medarbetare i Öst Media.
 
-            Vi jobbar med de starkaste medieprodukterna och varumärkena oh är en del av  NTM-koncernen vilket ger oss starka muskler för utveckling och hållbarhet. Vi eftersträvar jämställdhet och mångfald och värdesätter därför sökande med olika bakgrunder och erfarenheter.
+            Vi jobbar med de starkaste medieprodukterna och varumärkena och är en del av  NTM-koncernen vilket ger oss starka muskler för utveckling och hållbarhet. Vi eftersträvar jämställdhet och mångfald och värdesätter därför sökande med olika bakgrunder och erfarenheter.
 						</div>
 						<ButtonToolbar className={styles.btns}>
 							<Button size="lg" className={styles.leftBtn} href="https://jobb.plus/sok?&comp=2772814">

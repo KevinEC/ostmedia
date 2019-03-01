@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './variables.scss';
 import styles from './PartnersCard.module.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 class PartnersCard extends Component {
 
   render() { 
@@ -22,8 +20,8 @@ class PartnersCard extends Component {
     }
     else{
       return (
-        <div className={styles.card} style={css_order}>
-          <img className={styles.cardIcon} src={this.props.icon} />
+        <div className={styles.cardInactive} style={css_order}>
+          <img className={styles.cardIconInactive} src={this.props.icon} />
           <div className={styles.title}>
             <h3 className={styles.hoverLess}>{this.props.title}</h3>
           </div>
