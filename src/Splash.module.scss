@@ -366,10 +366,18 @@ hr {
 	.scroll_journalistik{
 		margin-top: 13.3%;
 	}
+
+	.scroll_partners{
+		margin-top: 60px;
+	}
 	
 }
 	
 @media (max-width: (50 + $md2)) {
+
+	.scroll{
+		margin-top: 5%;
+	}
 
 	.title{
 		font-size: 30px;
@@ -407,6 +415,10 @@ hr {
 
 @media (max-width: (50 + $md1)) {
 
+	.scroll_journalistik{
+		margin-top: 100px;
+	}
+
 	.description > max{
 		justify-content: center;
 		display: block;
@@ -426,51 +438,60 @@ hr {
 		content: '';
 		display: inline-block;
 		width: $title-line-width;
-		height: 36px;
+		height: 22px;
 		margin-right: 5px;
 		margin-left: $title-line-margin - 5px;
-		margin-top: 18.5px;
+		margin-top: 11px;
 		margin-bottom: auto;
 		background-color: $primary;
 	}
-	
+
+	.articleSubTitle{
+		font-size: 30px;
+	}
+
+	.articleParagraph, .articleListItem, .articleLink{
+		font-size: 18px;
+	}	
 }
 
 @media (max-width: (50 + $sm)) {
 
-	//copy pasted tiny settings. almost, some changes heh
-
-	.small .splash, .splash{
-		height: $tiny-splash-height !important;
-		background-color: $primary;
+	.scroll{
+		margin-top: 2%;
 	}
+
+	.scroll_partners{
+		margin-top: 50px;
+	}
+
+	//copy pasted tiny settings. almost, some changes heh
 	 .description, .descriptionAlt, .small .description,.small .descriptionAlt{
-	 	height: auto !important;
-		background-color: $primary;
+		//background-color: $primary;
 		padding: 20px 0;
 	}
 
 	.splash::before, .small .splash::before{
+		height: 100%;
+	} 
+	.small{
 		height: $tiny-splash-height !important;
-	}
-	 .splash::after, .small .splash::after{
-		height: $tiny-splash-height !important;
-		mix-blend-mode: normal;
-		filter: brightness(100%) grayscale(100%);
+		filter: brightness(60%) grayscale(60%);
 	}
 	 .splash:before{
-		background: $primary;
-		mix-blend-mode: normal;
+		height: 100vh;
+		mix-blend-mode: color;
 	}
 	 .title{
 		text-shadow: none;
+		margin-top: auto;
+		margin-right: auto;
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-	 .title:before{
-		background-color: white;
-	}
-
+	.articleParagraph, .articleListItem, .articleLink{
+		font-size: 14px;
+	}	
 	.cardContainer{
 		width: 80%;
 		justify-content: center;

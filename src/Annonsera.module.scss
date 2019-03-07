@@ -25,7 +25,7 @@ button{
 }
 
 .videoContainer{
-	position: fixed;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	background-color: transparent;
@@ -36,8 +36,6 @@ button{
 	content: '';
 	width: 100%;
 	height: 100%;
-	//background: linear-gradient(0.3turn, rgba($primary, 0.4), rgba($primary, 0.5));
-	//background-color: darken($primary,10%);
 	background: radial-gradient(ellipse at top, darken($primary,10%), rgba(1, 74, 163, 0.7) 40%, transparent 100%);
 	opacity: 1;
 	position: fixed;
@@ -57,7 +55,8 @@ button{
 
 .videoContainer::after{
 	content: '';
-	width: 100%;
+	width: 100vw;
+	max-width: 100vw;
 	height: 100%;
 	background-size: cover;
 	object-fit: cover;
@@ -70,7 +69,7 @@ button{
 	-o-background-size: cover;
 	background-size: cover;
 	top: 0;
-
+	z-index: 1;
 	filter: brightness(50%) grayscale(60%);
 }
 
@@ -129,9 +128,10 @@ button{
 
 @media (max-width: (50 + $md1)) {
 
-	.headerText {
-		width: 450px;
+	.headerText{
+		margin-right: 3%;
 	}
+
 	.headerText h1{
 		font-size: 45px;
 		margin-bottom: 5px;
@@ -141,16 +141,21 @@ button{
 		text-decoration: none;
 		color: $white;
 		font-family: "Open Sans";
-		font-size: 3.5vw;
+		font-size: 18px;
+	}
+
+	.headerText h4 {
+		font-size: 18px;
 	}
 
 }
 
 @media (max-width: (50 + $sm)) {
 
-	.headerText{
-		width: 80%;
+	.videoContainer{
+		width: 5%;
 	}
+
 	.headerText h1{
 		font-size: 8vw;
 		margin-bottom: 20px;
@@ -164,30 +169,33 @@ button{
 		background-color: white;
 	}
 	.headerText h4{
-		font-size: 3.5vw;
+		font-size: 3vw;
 		line-height: normal;
 		text-align: left;
 	}
 
 	.mailLink{
-		font-size: 3.5vw;
+		font-size: 3vw;
 	}
 }
 
 @media (max-width: (50 + $sm)) {
 
-	.headerText{
-		margin-left: 0;
+	.headerText h1 {
+		text-align: left;
+		width: 100%;
 	}
+
 	.headerText h4{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 
 	.mailLink{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	.leftBtn{
-		font-size: 4vw;
+		align-self: left;
+		font-size: 3vw;
 	}
 
 }
