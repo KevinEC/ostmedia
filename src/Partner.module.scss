@@ -43,40 +43,7 @@ $info-padding: 140px;
 
 	}
 }
-/*.header::before{
-	content: '';
-	position: absolute;
-	width: calc(#{$header-blur-width}% + 10px);
-	height: calc(#{$header-height} + 10px);
 
-	margin-left: -5px;
-	margin-top: -5px;
-
-	background-image: url(./assets/nt_bg.jpg);
-	background-size: 100vw auto;
-
-	background-position: 0 20%; 
-
-	filter: blur(4px);
-
-	z-index: 3;
-}
-.headerHalfPicLayer{
-	content: '';
-	position: absolute;
-	width: $header-normal-width;
-	height: $header-height;
-
-	margin-left: $header-blur-width;
-	margin-top: 0;
-
-	background-image: url(./assets/nt_bg.jpg);
-	background-size: 100vw auto;
-
-	background-position: ($header-blur-width + 0vw) 20%; // hack to convert to vw
-
-	z-index: 3;
-}*/
 .header max{
 	z-index: 19;
 }
@@ -106,7 +73,7 @@ $info-padding: 140px;
 	font-weight: 100;
 	font-size: 50px;
 	padding: $title-padding-y;
-	padding-left: calc($title-padding-x + 10px);
+	padding-left: calc(#{$title-padding-x} + 10px);
 	text-align: left;
 	border-radius: $border-radius 0 0px $border-radius; // bottom and top left
 	
@@ -116,7 +83,7 @@ $info-padding: 140px;
 .headerTitleContact{
 	max-width: 450px;
 	padding: $title-padding-y;
-	padding-right: $title-padding-x;
+	padding-right: #{$title-padding-x};
 
 	background-color: rgba(white, 1);
 	display: flex;
@@ -351,11 +318,6 @@ $info-padding: 140px;
 	.tinyLink{
 		padding: 0 !important;
 		width: 0 !important;
-	}
-
-	max{
-		display: flex;
-		flex-direction: column;
 	}
 
 	.mailLink{
