@@ -20,7 +20,7 @@ class Prenumerera extends Component {
   }
 
   componentDidMount() {
-    let dataURL = "http://api.ostmedia.se/wp-json/wp/v2/nyhetsmedia";
+    let dataURL = "https://api.ostmedia.se/wp-json/wp/v2/nyhetsmedia";
     fetch(dataURL)
       .then(res => res.json())
       .then(res => {

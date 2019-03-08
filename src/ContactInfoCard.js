@@ -10,7 +10,7 @@ class ContactInfoCard extends Component {
   
     this.state = {
       cardData: [],
-      wpRestUrl: "http://api.ostmedia.se/wp-json/wp/v2/"
+      wpRestUrl: "https://api.ostmedia.se/wp-json/wp/v2/"
     };
   }
 

@@ -20,7 +20,7 @@ class Partners extends Component {
 
 
   componentDidMount() {
-    let dataURL = "http://api.ostmedia.se/wp-json/wp/v2/nyhetsmedia?_fields=acf";
+    let dataURL = "https://api.ostmedia.se/wp-json/wp/v2/nyhetsmedia?_fields=acf";
     fetch(dataURL)
       .then(res => res.json())
       .then(res => {

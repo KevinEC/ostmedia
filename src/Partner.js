@@ -15,7 +15,7 @@ class Partner extends Component {
       title: "",
       partnerData: [],
       cardData: [],
-      wpRestUrl: "http://api.ostmedia.se/wp-json/wp/v2/",
+      wpRestUrl: "https://api.ostmedia.se/wp-json/wp/v2/",
       slug: this.props.match.params.name
     };
   }
