@@ -68,12 +68,12 @@ $info-padding: 140px;
 }
 .headerTitle h1{
 	margin: 0;
-	max-width: 450px;
+	max-width: 470px;
 	min-width: 350px;
 	font-weight: 100;
 	font-size: 50px;
 	padding: $title-padding-y;
-	padding-left: calc(#{$title-padding-x} + 10px);
+	padding-left: calc(#{$title-padding-x});
 	text-align: left;
 	border-radius: $border-radius 0 0px $border-radius; // bottom and top left
 	
@@ -208,6 +208,7 @@ $info-padding: 140px;
 	}
 	.headerTitle h1{
 		order: 1;
+		max-width: 450px;
 		width: $title-h1-width;
 		padding: $title-padding-y $title-padding-x;
 		border-radius: $border-radius 0 $border-radius 0px;

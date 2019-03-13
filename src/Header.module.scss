@@ -47,31 +47,20 @@ header{
 	right: 0;
 	left: 0;
 	top: 0;
-
 	width: 100%;
-
 	min-height: 100%;
-
 	max-height: 100vh;
-
 	object-fit: cover;
-
 	overflow: hidden;
-
 	z-index: -2;
 }
 
 video{
 	padding: 0;
 	margin: 0;
-
 	width: 100%;
 	height: 100%;
-
 	min-height: 100vh;
-	
-	//max-height: 100vh;
-
 	object-fit: cover;
 }
 
@@ -104,6 +93,13 @@ video{
 	text-align: center;
 	font-family: "Open Sans";
 	color: $white;
+}
+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+	// IE9+ CSS
+	.headerText{
+		margin: auto;
+	}
 }
 
 

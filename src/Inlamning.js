@@ -88,7 +88,7 @@ class Inlamning extends Component {
             this.digitalLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
               return data.acf[element] !== "";
             }));
-            this.digitalLinks = Object.values(data.acf).filter(element => {
+            this.digitalLinks = Object.keys(data.acf).map(e => data.acf[e]).filter(element => {
               return element !== "";
             });
           break;
@@ -96,7 +96,7 @@ class Inlamning extends Component {
           this.printLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
             return data.acf[element] !== "";
           }));
-          this.printLinks = Object.values(data.acf).filter(element => {
+          this.printLinks = Object.keys(data.acf).map(e => data.acf[e]).filter(element => {
             return element !== "";
           });
           break;
@@ -104,7 +104,7 @@ class Inlamning extends Component {
           this.webLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
             return data.acf[element] !== "";
           }));
-          this.webLinks = Object.values(data.acf).filter(element => {
+          this.webLinks = Object.keys(data.acf).map(e => data.acf[e]).filter(element => {
             return element !== "";
           });
           break;
@@ -112,7 +112,7 @@ class Inlamning extends Component {
           this.outsideLinkTitles = this.translateFieldNames(Object.keys(data.acf).filter(element => {
             return data.acf[element] !== "";
           }));
-          this.outsideLinks = Object.values(data.acf).filter(element => {
+          this.outsideLinks = Object.keys(data.acf).map(e => data.acf[e]).filter(element => {
             return element !== "";
           });
           break;
@@ -148,23 +148,23 @@ class Inlamning extends Component {
             
             <Card key={"digital"} title="Digital" 
                   icon={digitalIcon} 
-                  links={Object.values(this.digitalLinks)}
-                  linkTitles={Object.values(this.digitalLinkTitles)}
+                  links={Object.keys(this.digitalLinks).map(e => this.digitalLinks[e])}
+                  linkTitles={Object.keys(this.digitalLinkTitles).map(e => this.digitalLinkTitles[e])}
             />
             <Card key={"print"} title="Print" 
                   icon={printIcon} 
-                  links={Object.values(this.printLinks)}
-                  linkTitles={Object.values(this.printLinkTitles)}
+                  links={Object.keys(this.printLinks).map(e => this.printLinks[e])}
+                  linkTitles={Object.keys(this.printLinkTitles).map(e => this.printLinkTitles[e])}
                   />
             <Card key={"webbTv"} title="WebbTV"
                   icon={webbTvIcon} 
-                  links={Object.values(this.webLinks)}
-                  linkTitles={Object.values(this.webLinkTitles)}
+                  links={Object.keys(this.webLinks).map(e => this.webLinks[e])}
+                  linkTitles={Object.keys(this.webLinkTitles).map(e => this.webLinkTitles[e])}
                          />
             <Card key={"outside"} title="Utomhus" 
                   icon={utomhusIcon} 
-                  links={Object.values(this.outsideLinks)}
-                  linkTitles={Object.values(this.outsideLinkTitles)}
+                  links={Object.keys(this.outsideLinks).map(e => this.outsideLinks[e])}
+                  linkTitles={Object.keys(this.outsideLinkTitles).map(e => this.outsideLinkTitles[e])}
                   />
             
           </div>

@@ -45,12 +45,11 @@ button{
 
 @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
 	// IE9+ CSS
-	.videoContainer{
-		margin-left: -2.5%;
+	header{
+		width: 100%;
+		padding-right: 30%;
 	}
-	.videoContainer::before{
-		margin-top: -25%;
-	}
+
 }
 
 .videoContainer::after{
