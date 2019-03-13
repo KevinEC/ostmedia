@@ -68,7 +68,8 @@ $info-padding: 140px;
 }
 .headerTitle h1{
 	margin: 0;
-	max-width: 470px;
+	max-width: 500px;
+	word-break: normal;
 	min-width: 350px;
 	font-weight: 100;
 	font-size: 50px;
