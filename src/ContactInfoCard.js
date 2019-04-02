@@ -33,6 +33,7 @@ class ContactInfoCard extends Component {
       let phone = "";
       let mail = "";
       let webb = "";
+      let taltidning = "";
 
       if (this.props.fullName === data.acf.parent_contactcard.post_title) {
         
@@ -48,12 +49,17 @@ class ContactInfoCard extends Component {
           let webAdress = data.acf.webb;
           webb =  <li>Webb:<b><a href={webAdress}> {data.acf.webb}</a></b></li>;
         }
+        if(data.acf.taltidning){
+          let talAdress = data.acf.taltidning;
+          taltidning =  <li>Taltidning:<b><a href={talAdress}> {data.acf.taltidning}</a></b></li>;
+        }
         return <div key={i} className={styles.section} >
                   <h4>{data.acf.title}</h4>
                   <ul>
                     {mail}
                     {phone}
                     {webb}
+                    {taltidning}
                   </ul>
                 </div>
       }
